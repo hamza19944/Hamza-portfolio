@@ -1,0 +1,29 @@
+<%- include("basics/header") -%>
+<!-- start section -->
+<div class="section">
+    <div class="container">
+        <h3>Welcome to my Page.</h3>
+        <p>Simplcity showing character, hope you enjoy the experience.<br>  Be free to contact any time</p>
+        <a href="#work">projects</a>
+    </div>
+</div>
+<!-- end section -->
+<div class="land">
+    <div class="container">
+        <div class="design-pic" id="work">
+            <form action="/" method="post">
+                <% data.forEach((project, i) => {%>
+                    <div key="<%= i %>">
+                        <img src="<%= project.url %>">
+                        <p><%= project.content.substring(0, 50) %>...</p>
+                        <input type="hidden" name="param1" value="<%= project.title %>">
+                        <% let projectTitle = project.title.trim() %>
+                        <a href="<%= projectTitle %>"></a>
+                    </div>
+                <% }) %>
+            </form>
+        </div>
+        <a class="see-more" href="https://github.com/hamza19944?tab=repositories">See More</a>
+    </div>
+</div>
+<%- include("basics/footer") -%>

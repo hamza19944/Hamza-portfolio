@@ -1,0 +1,27 @@
+<%- include("basics/header") -%>
+<div class="resume">
+    <h3>General Informations</h3>
+    <div class="general-info">
+        <article>Scientist, taking code as a hobby. self-learning FrontEnd developer, I have learnt coding in 1 year. my journey started with introduction to programming from harvard through other udemy and youtube tutorials. solid foundations by reading(in arabic and english languages).</article>
+    </div>
+    <ul class="skills">
+        <h3>Skills:</h3>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>basics Vue</li>
+        <li>Node</li>
+        <li>Express JS</li>
+        <li>SQL database (fundamentals)</li>
+        <li>NoSQL database (Mongo, Mongoose)</li>
+    </ul>
+
+    <ul class="projects">
+        <h3>Projects:</h3>
+        <% head.forEach(h => { %>
+            <li><a href="<%= h.link %>"><%= h.title%></a></li>
+        <% }) %>
+    </ul>
+</div>
+<%- include("basics/footer") -%>

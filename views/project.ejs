@@ -1,0 +1,13 @@
+<%- include("basics/header") -%>
+<div class="project">
+    <div class="image">
+        <img src="<%= projp.url %>">
+        <a href="<%= projp.link %>"></a>
+    </div>
+
+    <div class="info-project">
+        <h3><%= projp.title %></h3>
+        <p><%= projp.content %><p>
+    </div>
+</div>
+<%- include("basics/footer") -%>
